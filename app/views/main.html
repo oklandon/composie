@@ -1,0 +1,32 @@
+<div class="container">
+<form role="form" ng-submit="addInstrument()">
+  <div class="row">
+    <div class= "input-group">
+      <input type="text" ng-model="instrument" placeholder="Instrument Name" class="form-control"/>
+      <span class="input-group-btn">
+        <input type="submit" class="btn btn-primary" value="Add New Instrument">
+      </span>
+    </div>
+  </div>
+</form>
+
+  <!--available instruments-->
+  <h3 class="text-muted titles">Instruments:</h3>
+
+   <div ui-sortable ng-model="instruments" class="holder" style:="width: 200px">
+     <p class="input-group instrumenter" ng-repeat="instrument in instruments" style="margin:3px; cursor: move;">
+       <span ng-model="instrument" class="form-control instrum" style="width:100px; overflow-x: hidden">{{instrument}}</span>
+        <span class="input-group-btn" style:"display:inline; float-left">
+        <button class="btn btn-danger"  ng-click="removeInstrument($index)" aria-label="Remove">X</button>
+        </span>
+      </p>
+  </div>
+</div>
+    <button class="btn btn-primary" ng-click="createsong()" aria-label="Start" style="margin: 17px">Compose my Song!</button>
+
+<div  ng-hide="showResults" class="results">
+    <h5> Your song is in {{tonic}} {{mm}}</h5>
+    <h5> Here is your progression: {{prog}}</h5>
+    <h5> These are the instruments for you to use: {{play}}</h5>
+</div> 
+</div>
