@@ -9,7 +9,8 @@
  */
 angular.module('composieApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.instruments = ['Guitar','Drums','Bass', 'Piano'];
+   // $scope.instruments = ['Guitar','Drums','Bass', 'Piano'];
+    $scope.instruments = ['Jazzmaster', 'P Bass', 'Rhodes Piano', 'Microkorg', 'EMX Electribe', 'EM1 Electribe', 'ES1 Electribe', 'Drum Kit', 'Volca Keys', 'Casio CZ-101', 'Kaossilator', 'Fenghuangqin', 'Clarinet', 'Poly 800', 'PT Casio', 'Gameboy', 'AY3'];
     $scope.majmin=['Major','Minor'];
     $scope.keys= ['A','B','C','D','E','F','G','Ab','Bb','C#','Eb','Gb'];
     $scope.play = ' ';
